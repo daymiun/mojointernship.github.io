@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupDraggableElements();
     setupFolderOpenEvents();
     setupClosableWindows();
+    setupMobileDoubleTap();
 });
 
 let currentZIndex = 100; // Initialize z-index values for draggable elements
@@ -40,6 +41,29 @@ function setupFolderOpenEvents() {
                 }
             });
         }
+    });
+}
+
+function setupMobileDoubleTap() {
+    let lastTap = { time: 0, target: null };
+
+    document.querySelectorAll('.file').forEach(file => {
+        file.addEventListener('touchend', function(e) {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap.time;
+
+            if (tapLength < 300 && lastTap.target === e.target) {
+                // Considered a double tap
+                const windowId = file.getAttribute('data-target');
+                if (windowId) {
+                    const windowEl = document.getElementById(windowId);
+                    windowEl.style.zIndex = ++currentZIndex;
+                    toggleWindow(windowId);
+                }
+            }
+
+            lastTap = { time: currentTime, target: e.target };
+        });
     });
 }
 
@@ -86,6 +110,23 @@ function toggleWindow(windowId) {
 function setupClosableWindows() {
     document.querySelectorAll('.close-btn').forEach(closeBtn => {
         closeBtn.addEventListener('click', function() {
+            const windowElement = this.closest('.window');
+            windowElement.style.display = 'none';
+        });
+    });
+}
+
+function setupClosableWindows() {
+    document.querySelectorAll('.close-btn').forEach(closeBtn => {
+        // Handle click event for desktop
+        closeBtn.addEventListener('click', function() {
+            const windowElement = this.closest('.window');
+            windowElement.style.display = 'none';
+        });
+
+        // Handle touchend event for mobile
+        closeBtn.addEventListener('touchend', function(event) {
+            event.preventDefault(); // Prevents additional mouse events
             const windowElement = this.closest('.window');
             windowElement.style.display = 'none';
         });
