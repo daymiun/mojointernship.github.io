@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Mimic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<div class="navbar">user/Mojo_Supermarket_Internship</div>
+
+<div id="desktop">
+    <!-- Files on the desktop -->
+    <div class="file" id="file1" data-target="window1">
+        <img src="textdoc.svg" alt="Text Document Icon">
+        <span class="file-name">internship_info.txt</span>
+    </div>
+    <div class="file" id="file2" data-target="window2">
+        <img src="textdoc.svg" alt="Text Document Icon">
+        <span class="file-name">how_2_apply.txt</span>
+    </div>
+    <div class="file" id="file3" data-target="window3">
+        <img src="folder.svg" alt="Folder Icon">
+        <span class="file-name">apply_here</span>
+    </div>
+
+    <!-- Windows -->
+    <div class="window" id="window1">
+        <div class="title-bar">
+            Internship Info
+            <div class="close-btn">X</div>
+        </div>
+        <div class="content">
+            Application Due Date: April 20, 2024 <br><br>
+            Available Roles: Art Director, Copywriter, Designer, Strategist, Account, Maker<br><br>
+            Requirements: Must be in NYC for Summer. Must be nice. Must be cool.<br><br>
+            *Apply Now!
+        </div>
+    </div>
+
+    <div class="window" id="window2">
+        <div class="title-bar">
+            How to Apply
+            <div class="close-btn">X</div>
+        </div>
+        <div class="content">
+            The application is simple. You can submit one file. One single file to sell yourself and tell us about yourself. It can be a word doc, or a psdp, or a video, or mp3—we don’t care, as long as you create it yourself.
+            Those are the only requirements. 
+            Happy uploading. :)
+        </div>
+    </div>
+
+    <div class="window" id="window3">
+        <div class="title-bar">
+            Application
+            <div class="close-btn">X</div>
+        </div>
+        <div class="content">
+            <!-- Inside the application window -->
+             <a href="https://drive.google.com/drive/folders/1_03p6Hj4RUebxIRRV8Xto4e1IjsQgcSv" target="_blank" class="file">
+            <img src="folder.svg" alt="Folder Icon">
+            <span class="file-name">Art_Director</span>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1oD_rUqZQnWnZqK8Cg_fD-lmaahEa8vcp" target="_blank" class="file">
+            <img src="folder.svg" alt="Folder Icon">
+            <span class="file-name">Copywriter</span>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1M0JHbDP5q5-zUMFPKRmo2jhvgBZ1i2SK" target="_blank" class="file">
+            <img src="folder.svg" alt="Folder Icon">
+            <span class="file-name">Strategist</span>
+        </a>
+        <a href="https://drive.google.com/drive/folders/10i7_rNTG3V-pfVjl2RR6sfT038ViCYPK" target="_blank" class="file">
+            <img src="folder.svg" alt="Folder Icon">
+            <span class="file-name">Account</span>
+        </a>
+        <a href="https://drive.google.com/drive/folders/1xXloyeLzZms4LIC_ufEIrtS0kzjdi5bd" target="_blank" class="file">
+            <img src="folder.svg" alt="Folder Icon">
+            <span class="file-name">Design</span>
+        </a>
+        <a href="https://drive.google.com/drive/folders/11wPegLksWtPxSrDZu_I4xpyKUhyrj61B" target="_blank" class="file">
+            <img src="folder.svg" alt="Folder Icon">
+            <span class="file-name">Content_Creator</span>
+        </a>
+            </div>
+            <!-- ... other roles ... -->
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
