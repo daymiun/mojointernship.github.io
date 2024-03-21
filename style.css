@@ -140,3 +140,21 @@ body, html {
     width: 100%; /* Ensures content uses the full width of the window */
     box-sizing: border-box; /* Adjusts box model to include padding and border in the element's total width and height */
 }
+
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+    .window {
+        width: 80%; /* Adjust window width */
+        max-width: 250px; /* Optional: prevents the window from being too wide on large phones */
+        font-size: 12px; /* Smaller text */
+    }
+
+    .title-bar {
+        font-size: 12px; /* Adjust title bar text */
+    }
+
+    .content {
+        padding: 10px; /* Adjust content padding if necessary */
+    }
+}
