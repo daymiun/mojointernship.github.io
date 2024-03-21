@@ -41,9 +41,9 @@ body, html {
 }
 
 /* Specific positioning for each file icon to avoid stacking */
-#file1 { top: 60px; left: 20px; }
-#file2 { top: 60px; left: 260px; }
-#file3 { top: 60px; left: 500px; }
+#file1 { top: 60px; left: 25px; }
+#file2 { top: 120px; left: 25px; }
+#file3 { top: 180px; left: 25px; }
 
 
 .window {
