@@ -3,6 +3,19 @@
     src: url('PixelifySans-Regular.ttf') format('truetype');
 }
 
+/* Add the new font-face for PixelifySans-Bold */
+@font-face {
+    font-family: 'PixelifySans-Bold';
+    src: url('PixelifySans-Bold.ttf') format('truetype');
+}
+
+
+/* Example of applying the bold font to all headers */
+h1, h2, h3, h4, h5, h6, .title-bar {
+    font-family: 'PixelifySans-Bold', sans-serif;
+}
+
+
 body, html {
     font-family: 'PixelifySans-Regular', sans-serif;
     background-color: #f0f0f0; /* Light grey background */
@@ -77,6 +90,9 @@ body, html {
     cursor: move;
     display: flex;
     justify-content: space-between; /* Space out title and close button */
+    position: sticky;
+    top: 0;
+    z-index: 10; 
 }
 
 .close-btn {
@@ -120,8 +136,9 @@ body, html {
 /* Adjustments for the 'Application' window */
 .window {
     width: 80%; /* Adjust based on your layout */
-    max-width: 600px; /* Prevents the window from getting too large */
     margin: auto; /* Centers the window */
+    max-height: 90vh; /* Adjust as needed */
+    max-width: 90vw; /* Adjust as needed */
     box-sizing: border-box; /* Ensures padding does not affect overall width */
     resize: both; /* Allows resizing both horizontally and vertically */
     overflow: auto; /* Adds scrollbars if content overflows */
