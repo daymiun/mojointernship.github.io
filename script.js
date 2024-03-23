@@ -14,6 +14,11 @@ function setupDraggableElements() {
 
         titleBar.addEventListener('mousedown', startDrag);
         titleBar.addEventListener('touchstart', startDrag);
+        
+        windowElement.addEventListener('click', () => {
+    windowElement.style.zIndex = ++currentZIndex;
+});
+
     });
 
     document.querySelectorAll('#desktop > .file').forEach(folder => {
