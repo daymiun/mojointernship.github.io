@@ -137,3 +137,28 @@ function setupClosableWindows() {
         });
     });
 }
+// Bouncing logic for the text element
+document.addEventListener('DOMContentLoaded', () => {
+    const bouncingText = document.getElementById('bouncingText');
+    let posX = 0, posY = 0, dirX = 1, dirY = 1;
+
+    const moveText = () => {
+        const maxX = window.innerWidth - bouncingText.offsetWidth;
+        const maxY = window.innerHeight - bouncingText.offsetHeight;
+
+        // Update the position
+        posX += dirX;
+        posY += dirY;
+
+        // Reverse direction if hitting boundaries
+        if (posX >= maxX || posX <= 0) dirX *= -1;
+        if (posY >= maxY || posY <= 0) dirY *= -1;
+
+        // Apply the position
+        bouncingText.style.left = `${posX}px`;
+        bouncingText.style.top = `${posY}px`;
+    };
+
+    // Move every 10 milliseconds for a smoother animation
+    setInterval(moveText, 14);
+});
