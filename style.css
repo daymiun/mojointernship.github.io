@@ -189,3 +189,11 @@ body, html {
     z-index: 0;
     border: 2px solid #0000FE;
 }
+
+
+.footnote {
+    font-size: 8px; /* Adjust size as needed */
+    color: #0000FE; /* Blue text for general content */
+    margin-top: 20px; /* Space from the content above */
+    text-align: center; /* Center-align the footnote */
+}
